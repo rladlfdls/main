@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang=ko dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>초성게임</h1><p>
+      <label for="" id="quiz"></label><br>
+    <input type="text" id="keyvalue">
+    <button type="button" name="button" onclick="checkData()">입력</button>
+
+
+<script type="text/javascript">
+
+  var quiz = new Array("1단계 ㅊ ㅂ ㅅ ㅈ", "2단계 ㅅ ㅌ ㄱ ㅈ", "3단계 ㅅ ㅂ ㅅ ㅇ");
+  var answ = new Array("칭병사직", "삭탈관직", "십불선업");
+  var nowQuiz = 0;
+
+  changeQuizData(0);
+
+  function checkData(){
+    var text = document.getElementById("keyvalue");
+    if(text.value == answ[nowQuiz])
+    {
+      alert("wow you are genious");
+      changeQuizData(nowQuiz+1);
+
+    }
+    else
+    {
+      alert("삡");
+    }
+  }
+
+
+  function changeQuizData(quizNumber) {
+    nowQuiz = quizNumber;
+    var labelQuiz = document.getElementById("quiz");
+    labelQuiz.innerHTML = "";
+    labelQuiz.innerHTML = quiz[nowQuiz];
+
+  }
+
+  var input = document.getElementById("keyvalue");
+  input.addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        checkData();
+      }
+  });
+</script>
+
+  </body>
+</html>
