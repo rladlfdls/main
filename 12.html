@@ -35,10 +35,18 @@
 
 
   function changeQuizData(quizNumber) {
-    nowQuiz = quizNumber;
-    var labelQuiz = document.getElementById("quiz");
-    labelQuiz.innerHTML = "";
-    labelQuiz.innerHTML = quiz[nowQuiz];
+    if(quizNumber >= quiz.length)
+    {
+        alert("문제 다 품");
+
+    }
+    else {
+
+      nowQuiz = quizNumber;
+      var labelQuiz = document.getElementById("quiz");
+      labelQuiz.innerHTML = "";
+      labelQuiz.innerHTML = quiz[nowQuiz];
+    }
 
   }
 
