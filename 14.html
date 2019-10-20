@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang=ko dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #game h4 {
+        margin-bottom:6px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <h2>사업 루트</h2>
+
+    <div id="game">
+
+    </div>
+<button type="button" name="button" onclick="checkAnswer();">입력</button>
+  <script type="text/javascript">
+
+    var question = new Array("업시름","준견", "견삭", "늠균", "균축", "칭웅", "벽읍", "륵흔", "축융", "즉견", "융준", "축하식", "업셈", "값표");
+
+    var answer = new Array("늠준","견취견", "삭름", "균핵균", "축대칭", "웅문거벽", "읍륵", "흔들축", "융즉", "견융", "준축", "식업", "셈값", "표구렁");
+
+    var nowQuiz = 0;
+
+    addQuiz(0);
+
+
+      function addQuiz(quizNum) {
+         nowQuiz = quizNum;
+         if(nowQuiz < question.length)
+         {
+              document.getElementById("game").innerHTML += '<h4>'+question[nowQuiz]+'</h4><input type="text" id="keyvalue'+nowQuiz+'">';              ;
+              if(nowQuiz >= 1) {
+                document.getElementById("keyvalue"+(nowQuiz-1)).value=answer[nowQuiz-1];
+                document.getElementById("keyvalue"+(nowQuiz-1)).disabled = true;
+                }
+              document.getElementById("keyvalue"+nowQuiz).focus();
+         }
+      }
+
+    function checkAnswer() {
+      if(document.getElementById("keyvalue"+nowQuiz).value == answer[nowQuiz])
+      {
+          addQuiz(nowQuiz+1);
+      }
+      else {
+        alert('실패');
+        game.innerHTML = '';
+        addQuiz(0);
+      }
+    }
+
+
+
+
+  </script>
+  </body>
+</html>
