@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang=ko dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>초성게임</h1><p>
+      <label for="" id="quiz"></label><br>
+    <input type="text" id="keyvalue">
+    <button type="button" name="button" onclick="checkData()">입력</button>
+
+
+<script type="text/javascript">
+
+  var quiz = new Array("1단계 ㄱ ㄱ ㄹ", "2단계 ㄱ ㅇ ㅂ", "3단계 ㄱ ㅈ ㄱ",
+  "4단계 ㅊ ㄷ ㅊ", "5단계 ㄱ ㄷ ㄱ", "6단계 ㄱ ㅇ ㄹ", "7단계 ㄱ ㅅ ㅈ",
+  "8단계 ㄱ ㅊ ㄱ", "9단계 ㄱ ㅂ ㅈ", "10단계 ㄱ ㅎ ㅅ", "11단계 ㄱ ㅈ ㄱ",
+  "12단계 ㄱ ㅈ ㅊ", "13단계 ㄱ ㅎ ㅅ", "14단계 ㄱ ㄱ ㅅ", "15단계 ㄱ ㅇ ㅈ",
+  "16단계 ㄱ ㅅ ㅈ", "17단계 ㄱ ㄷ ㅊ", "18단계 ㄱ ㄲ ㅇ", "19단계 ㅂ ㅂ ㄹ",
+   "20단계 ㅇ ㅅ ㅊ");
+
+  var answ = new Array("굳기름", "굵은밸", "균질권", "축대칭", "권덕규", "권익륭", "권설직", "견취견", "견방직", "견혼식", "곽재겸", "결정축", "곽학송", "결관식", "궁인직", "궁수좌", "굽뒤축", "깃꼴잎", "벡보름", "엑스축");
+  var nowQuiz = 0;
+
+  changeQuizData(0);
+
+  function checkData(){
+    var text = document.getElementById("keyvalue");
+    if(text.value == answ[nowQuiz])
+    {
+      alert("wow you are genious");
+      changeQuizData(nowQuiz+1);
+
+    }
+    else
+    {
+      alert("삡");
+    }
+  }
+
+
+  function changeQuizData(quizNumber) {
+    if(quizNumber >= quiz.length)
+    {
+        alert("문제 다 품");
+
+    }
+    else {
+
+      nowQuiz = quizNumber;
+      var labelQuiz = document.getElementById("quiz");
+      labelQuiz.innerHTML = "";
+      labelQuiz.innerHTML = quiz[nowQuiz];
+    }
+
+  }
+
+  var input = document.getElementById("keyvalue");
+  input.addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        checkData();
+      }
+  });
+</script>
+
+  </body>
+</html>
