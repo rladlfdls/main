@@ -2,14 +2,106 @@
 <html lang="ko" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>test server</title>
+    <title>도윤 멍청이</title>
+    <style>
+      @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+      body {
+          font-family: "Nanum Gothic", sans-serif;
+      }
+
+      .wrap {
+          width:90%;
+          margin:0 auto;
+      }
+      .header {
+
+        position:relative;
+        height:50px;
+        border:1px solid #000;
+      }
+
+      .header span {
+        postion:absolute;
+        top : 0;
+        left: 0;
+        font-size:30px;
+        line-height:40px;
+        margin-left:20px;
+      }
+
+      .header ul {
+        position:absolute;
+        top : 0;
+        right : 0;
+      }
+
+      .header ul li {
+        float :left;
+        margin-right:10px;
+        display:block;
+            }
+
+
+        .content {
+
+          height:700px;
+          border:1px solid #000;
+        }
+
+        .content  img {
+          width:800px;
+          height:auto;
+        }
+
+        .footer {
+          height:50px;
+          border:1px solid #000;
+        }
+        .footer ul li {
+          float:left;
+          display:block;
+          margin-right:20px;
+        }
+        .footer ul li a {
+              text-decoration:none;
+        }
+        .header ul li a {
+              text-decoration:none;
+        }
+        .footer span {
+          float:right;
+          margin-right:20px;
+
+        }
+          .footer span a {
+                  text-decoration:none;
+          }
+
+    </style>
   </head>
   <body>
-  <h3>제작자: 끝말레윤(숭늉)<p></h3>
-<a href="2.html"><h3>sign-up</h3></a>
-<a href="3.html"><h3>sign-in</h3></a>
-<a href="5.html"><h3>패치 노트&version</h3></a>
-<a href="6.html"><h3>도움을 주신 분들</h3><a>
-<a href="7.html"><h3>안녕한</h3><a>
+      <div class="wrap">
+        <div class="header">
+          <span><strong>test server</strong></span>
+          <ul>
+            <li><a href="3.html">sign-in</a></li>
+            <li><a href="2.html">sign-up</a><li>
+          </ul>
+        </div>
+        <div class="content">
+          <!--
+          <img src="wordchain.png" alt="Smiley face">-->
+        </div>
+        <div class="footer">
+          <ul>
+            <li><a href="5.html">패치 노트</a></li>
+            <li><a href="7.html">안녕한</a><li>
+          </ul>
+           <span><a href="6.html">도움을 주신 분들</a></span>
+
+        </div>
+
+      </div>
   </body>
 </html>
