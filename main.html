@@ -30,6 +30,10 @@
         line-height:40px;
         margin-left:20px;
       }
+      .header #name {
+        font-size:13px;
+      }
+
 
       .header ul {
         position:absolute;
@@ -128,10 +132,11 @@
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
-    document.ready(function(){
-      var uid = getParameterByName('nickname');
-      document.getElementById("name").value = uid;
-    });
+    window.onload = function() {
+       var uid = getParameterByName('nickname');
+       document.getElementById("name").innerHTML = uid;
+
+    };
   </script>
   </body>
 </html>
