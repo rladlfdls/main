@@ -134,6 +134,12 @@
 
     window.onload = function() {
        var uid = getParameterByName('nickname');
+       if(uid =='')
+      {
+        alert('로그인안됨');
+        window.href="./index.html";
+      }
+      else 
        document.getElementById("name").innerHTML = uid;
 
     };
