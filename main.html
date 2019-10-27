@@ -52,8 +52,20 @@
 
           height:700px;
           border:1px solid #000;
+          position:relative;
         }
 
+        .content .profile {
+          position:absolute;
+          top : 0;
+          right:0;
+          margin-right:10px;
+          margin-top:10px;
+          padding:10px;
+          border:1px solid #000;
+          width:200px;
+          height:100px;
+        }
         .content  img {
           width:800px;
           height:auto;
@@ -82,12 +94,21 @@
           .footer span a {
                   text-decoration:none;
           }
+
+
 	.content ul li {
 		display:block;
 		margin-bottom:20px;}
+
 	.content ul li a {
 		text-decoration:none;
 		}
+    .content .profile ul {
+      padding:0px;
+    }
+    .content .profile ul li  {
+      margin-bottom: 5px;
+    }
     </style>
   </head>
   <body>
@@ -113,6 +134,15 @@
 </ul>
           <!--
           <img src="wordchain.png" alt="Smiley face">-->
+
+
+            <div class="profile">
+              <ul>
+                <li>이름 : <span id="profi"></span></li>
+                <li>레벨 : 1</li>
+              </ul>
+            </div>
+
         </div>
         <div class="footer">
           <ul>
@@ -139,9 +169,10 @@
         alert('로그인안됨');
         window.location.href ="./index.html";
       }
-      else
+      else {
        document.getElementById("name").innerHTML = uid;
-
+           document.getElementById("profi").innerHTML = uid;
+         }
     };
   </script>
   </body>
