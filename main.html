@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>world chain</title>
+    <title>도윤 멍청이</title>
     <style>
       @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
@@ -77,19 +78,35 @@
           .footer span a {
                   text-decoration:none;
           }
-
+	.content ul li {
+		display:block;
+		margin-bottom:20px;}
+	.content ul li a {
+		text-decoration:none;
+		}
     </style>
   </head>
   <body>
       <div class="wrap">
         <div class="header">
-          <span><strong>world chain</strong></span>
+          <span><strong>test server</strong></span>
           <ul>
-            <li><a href="3.html">sign-in</a></li>
-            <li><a href="2.html">sign-up</a><li>
+            <li><span id="name"></span> 환영합니다!</li>
           </ul>
         </div>
         <div class="content">
+
+<ul>
+<li>
+<a href="https://rladlfdls.github.io/main/12.html">미니게임(1단계)</a>
+</li>
+<li>
+<a href="https://rladlfdls.github.io/main/13.html">미니게임(2단계)</a>
+</li>
+<li>
+<a href="https://rladlfdls.github.io/main/14.html">인공지능 전투</a>
+</li>
+</ul>
           <!--
           <img src="wordchain.png" alt="Smiley face">-->
         </div>
@@ -103,5 +120,18 @@
         </div>
 
       </div>
+  <script>
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    document.ready(function(){
+      var uid = getParameterByName('nickname');
+      document.getElementById("name").value = uid;
+    });
+  </script>
   </body>
 </html>
