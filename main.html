@@ -202,5 +202,38 @@
          }
     };
   </script>
+
+
+  <script type="text/javascript">
+
+    var quiz = new Array("박기완");
+
+    var answ = new Array("https://brunch.co.kr/@rldhks999#articles");
+
+    function checkData(){
+
+
+      var text = document.getElementById("keyvalue");
+
+      //for문 돌리면서  입력한 글씨 찾고
+      var isExist = -1;
+
+      for(var i =0; i<quiz.length; i++)
+      {
+          if(quiz[i] == text) {
+            isExist = i;
+            break;
+          }
+      }
+
+      //없으면 김도유ㅜㄴ뻐큐 출력
+      if(isExist == -1 ) {
+        alert("doyoon fuck u");
+      }
+      else {
+        location.href=answ[isExist];
+      }
+
+    };
   </body>
 </html>
