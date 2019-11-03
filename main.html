@@ -151,6 +151,12 @@
 <li>
 <a href="https://rladlfdls.github.io/main/14.html">인공지능 전투</a>
 </li>
+<li>
+  <label for="" id="quiz"></label><br>
+  <input type="text" id="keyvalue">
+  <button type="button" name="button" onclick="checkData()">입력</button>
+
+</li>
 </ul>
           <!--
           <img src="wordchain.png" alt="Smiley face">-->
@@ -165,9 +171,6 @@
             </div>
 
 
-            <label for="" id="quiz"></label><br>
-            <input type="text" id="keyvalue" style="padding: 5px; margin-left: 37px;">
-            <button type="button" name="button" onclick="checkData()">입력</button>
 
 
         </div>
@@ -235,6 +238,16 @@
       }
 
     };
+
+
+      var input = document.getElementById("keyvalue");
+      input.addEventListener("keyup", function(event) {
+          event.preventDefault();
+          if (event.keyCode === 13) {
+            checkData();
+          }
+      });
+      
     </script>
   </body>
 </html>
